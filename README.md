@@ -1,6 +1,6 @@
 # Docker Image for Vertica
 
-Vertica Community Edition cluster. MC. Kafka integration scheduler. Fast building/SLOW starting.
+Vertica Community Edition cluster. MC. Kafka integration scheduler. SLOW starting.
 
 Based on https://github.com/bluelabsio/docker-vertica
 
