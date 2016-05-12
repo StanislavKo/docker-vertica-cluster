@@ -1,0 +1,34 @@
+vertica1:
+  image: vertica_cluster/vertica
+  links:
+    - "vertica2:vertica2"
+    - "vertica3:vertica3"
+  hostname: vertica1
+  ports:
+    - "33522:22"
+    - "5433:5433"
+    - "5444:5444"
+    - "5450:5450"
+  command: "/home/dbadmin/docker-entrypoint.sh -mc -cluster"
+vertica2:
+  image: vertica_cluster/vertica
+  hostname: vertica2
+  ports:
+    - "33523:22"
+    - "15433:5433"
+    - "15444:5444"
+  command: "/home/dbadmin/docker-entrypoint.sh"
+vertica3:
+  image: vertica_cluster/vertica
+  hostname: vertica3
+  ports:
+    - "33524:22"
+    - "25433:5433"
+    - "25444:5444"
+  command: "/home/dbadmin/docker-entrypoint.sh"
+
+
+
+
+
+
